@@ -33,7 +33,6 @@ ruamel.yaml==0.16.12
 ruamel.yaml.clib==0.2.2
 selenium
 secure-smtplib
-ssl
 six==1.15.0
 soupsieve==2.0.1
 sqlparse==0.4.1
