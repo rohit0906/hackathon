@@ -39,7 +39,7 @@ sqlparse==0.4.1
 twilio
 urllib3==1.25.11
 vext==0.7.4
---no-use-wheel vext.gi==0.7.4
+vext.gi==0.7.4 --no-binary :all:
 webdriver_manager
 wikipedia
 whitenoise==5.2.0
