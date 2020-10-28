@@ -13,7 +13,8 @@ if True:
     import wikipedia,requests
     import wolframalpha
     from .calender.create_event import create_event
-
+    import pyjokes 
+    from .login_site import login_site
 class person:
     name = ''
     def setName(self, name):
@@ -22,7 +23,6 @@ class asis:
     name = ''
     def setName(self, name):
         self.name = name
-
 person_obj = person()
 asis_obj = asis()
 asis_obj.name = 'kiki'
@@ -46,6 +46,7 @@ def record_audio(ask=""):
             engine_speak('I did not get that')
         except sr.RequestError:
             engine_speak('Sorry, the service is down') 
+        #engine_speak(f"{voice_data.lower()}") 
         return voice_data.lower()
 def respond(voice_data):
     #  greeting
@@ -71,6 +72,23 @@ def respond(voice_data):
     #  greeting
     elif there_exists(["how are you","how are you doing"],voice_data):
         engine_speak(f"I'm very well, thanks for asking {person_obj.name}")
+    #  Jokes
+    elif there_exists(["joke"],voice_data):
+        engine_speak(pyjokes.get_joke())
+    #   Login Sites
+    elif there_exists(["login"],voice_data):
+        user=record_audio("Tell the User name")
+        password=record_audio("Tell the password")
+        if there_exists(["codechef"],voice_data):
+            login_site(user,password,0)
+        if there_exists(["facebook",'fb'],voice_data):
+            login_site(user,password,1)
+        if there_exists(["hackerrank"],voice_data):
+            login_site(user,password,2)
+        if there_exists(["codeforce"],voice_data):
+            login_site(user,password,3)
+        if there_exists(["linkedin"],voice_data):
+            login_site(user,password,4)
     #creating events in google calender
     elif there_exists(["event"],voice_data):
         '''summary="Event",description="This is a tutorial example of automating google calendar with python"
