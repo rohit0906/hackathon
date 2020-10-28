@@ -157,22 +157,6 @@ def respond(voice_data):
         moves=["head", "tails"]   
         cmove=random.choice(moves)
         engine_speak("The computer chose " + cmove)
-    # calc
-    elif there_exists(["plus","minus","multiply","divide","power","+","-","*","/"],voice_data):
-        opr = voice_data.split()[1]
-
-        if opr == '+':
-            engine_speak(str(int(voice_data.split()[0]) + int(voice_data.split()[2])))
-        elif opr == '-':
-            engine_speak(str((int(voice_data.split()[0]) - int(voice_data.split()[2])))
-        elif opr == 'multiply':
-            engine_speak(str(int(voice_data.split()[0]) * int(voice_data.split()[2])))
-        elif opr == 'divide':
-            engine_speak(str(int(voice_data.split()[0]) / int(voice_data.split()[2])))
-        elif opr == 'power':
-            engine_speak(int(voice_data.split()[0]) ** int(voice_data.split()[2]))
-        else:
-            engine_speak("Wrong Operator")
     # screenshot
     elif there_exists(["capture","my screen","screenshot"],voice_data):
         myScreenshot = pyautogui.screenshot()
