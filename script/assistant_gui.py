@@ -5,7 +5,7 @@ if True:
     import webbrowser,time
     import playsound
     import os
-    import random,pyttsx3,pyautogui
+    import random,pyautogui
     from gtts import gTTS
     import bs4 as bs
     import urllib.request
