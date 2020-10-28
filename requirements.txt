@@ -20,7 +20,6 @@ Pillow==8.0.0
 playsound==1.2.2
 psycopg2==2.8.6
 PyAutoGUI==0.9.52
-pycopy-webbrowser==0.0.0
 PyGetWindow==0.0.9
 pyjokes
 PyMsgBox==1.0.9
