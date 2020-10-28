@@ -6,7 +6,7 @@ chardet==3.0.4
 click==7.1.2
 datetime
 flask
-googleapiclient
+google-api-python-client
 google_auth_oauthlib
 google
 gTTS==2.1.1
