@@ -3,7 +3,6 @@ if True:
     import speech_recognition as sr
     from time import ctime
     import webbrowser,time
-    import playsound
     import os
     import random
     from gtts import gTTS
@@ -226,8 +225,5 @@ def respond(voice_data):
         except:
             webbrowser.open('www.google.com')
 def engine_speak(audio_string):
-    tts=gTTS(text=audio_string,lang='en',slow=False)
-    filename=str(random.randint(1,100110))+"welcome.wav"
-    tts.save(filename)
-    playsound.playsound(filename)
-    os.remove(filename)
+    tts=gTTS(text=audio_string,lang='en')
+    print(tts)
