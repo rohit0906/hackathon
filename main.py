@@ -19,5 +19,5 @@ def process():
     assistant_gui.respond(name)
     return render_template('home.html', name=name)
 
-
-app.run(debug=False)
+if __name__ == "__main__":
+    app.run(debug=False)
