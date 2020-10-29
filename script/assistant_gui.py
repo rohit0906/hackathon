@@ -225,5 +225,4 @@ def respond(voice_data):
         except:
             webbrowser.open('www.google.com')
 def engine_speak(audio_string):
-    tts=gTTS(text=audio_string,lang='en')
-    print(tts)
+    print(audio_string)
