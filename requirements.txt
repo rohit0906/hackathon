@@ -19,6 +19,7 @@ pickle-mixin
 Pillow==8.0.0
 playsound
 psycopg2==2.8.6
+PyAudio
 PyAutoGUI==0.9.52
 PyGetWindow==0.0.9
 pyjokes
