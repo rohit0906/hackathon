@@ -44,4 +44,5 @@ webdriver_manager
 wikipedia
 whitenoise==5.2.0
 wolframalpha
-
+speech_recognition
+protobuf

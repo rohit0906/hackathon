@@ -5,7 +5,7 @@ if True:
     import webbrowser,time
     import playsound
     import os
-    import random,pyautogui
+    import random#,pyautogui
     from gtts import gTTS
     import bs4 as bs
     import urllib.request
@@ -177,8 +177,9 @@ def respond(voice_data):
         engine_speak("The computer chose " + cmove)
     # screenshot
     elif there_exists(["capture","my screen","screenshot"],voice_data):
-        myScreenshot = pyautogui.screenshot()
-        myScreenshot.save('media/images/capture.png')     
+        pass
+        # myScreenshot = pyautogui.screenshot()
+        # myScreenshot.save('media/images/capture.png')     
     # to search wikipedia for definition
     elif there_exists(["definition of"],voice_data):
         definition=voice_data.split("definition of")[-1][1:]
