@@ -76,8 +76,8 @@ def respond(voice_data):
         engine_speak(pyjokes.get_joke())
     #   Login Sites
     elif there_exists(["login"],voice_data):
-        user=record_audio("Tell the User name")
-        password=record_audio("Tell the password")
+        user="user123"#record_audio("Tell the User name")
+        password="pass123"#record_audio("Tell the password")
         if there_exists(["codechef"],voice_data):
             login_site(user,password,0)
         if there_exists(["facebook",'fb'],voice_data):
